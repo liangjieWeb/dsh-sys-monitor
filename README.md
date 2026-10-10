@@ -1,4 +1,4 @@
-# dsh-sys-monitor
+# @liangjieweb/dsh-sys-monitor
 
 A DeepSeek Harness plugin that shows the host machine's live CPU perf levels,
 memory, GPU and network throughput in the Web GUI, as six progress bars with
@@ -394,14 +394,27 @@ lives.
 
 ## Install
 
+From npm:
+
 ```bash
-dsh plugin --profile desktop install /Users/liangjie/Documents/1-my/dsh-tools/dsh-sys-monitor
+dsh plugin --profile demo add @liangjieweb/dsh-sys-monitor
 ```
 
-or, from the Plugins page in the sidebar, install the directory above.
+Or straight from this repository:
 
-The profile records it as a `link:` dependency, so the installed copy is this
-directory: edit the source here, reload the plugin, and refresh the page.
+```bash
+dsh plugin --profile demo add github:liangjieWeb/dsh-sys-monitor
+```
+
+Once installed, the Plugins page in the sidebar lists it and toggles its row.
+To develop against a local checkout instead, link that directory:
+
+```bash
+dsh plugin --profile demo add /path/to/dsh-sys-monitor
+```
+
+A linked install records a `link:` dependency, so the installed copy is that
+directory: edit the source there, reload the plugin, and refresh the page.
 
 ## Tune
 
