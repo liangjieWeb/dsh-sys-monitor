@@ -1,0 +1,13 @@
+# The dsh-sys-monitor bundle patch: one Loader row.
+#
+# A single row is enough because the package ships both halves. The Host half
+# registers the sample route; the client-modules plugin reads the package's
+# `dsh.client` declaration from the very same entry and serves `lib/client.js`
+# to the page, which mounts the overlay panel.
+#
+# `insert` introduces the row. A bare `- id: ...` entry would only address a row
+# an earlier layer already created, and would silently compose to nothing.
+
+- insert:
+    - id: sys-monitor
+      name: 'dsh-sys-monitor'

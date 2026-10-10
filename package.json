@@ -1,0 +1,65 @@
+{
+  "name": "dsh-sys-monitor",
+  "version": "0.1.0",
+  "description": "System monitor overlay for the DeepSeek Harness Web GUI: CPU perf levels, memory, GPU and network as live progress bars with live clocks",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/platform/*.js",
+    "helper/dsh-ioreport.c",
+    "helper/dsh-cpuid.c",
+    "tools/build-helper.sh",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "liangjieWeb <liangjieWeb@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liangjieWeb/dsh-sys-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liangjieWeb/dsh-sys-monitor/issues"
+  },
+  "homepage": "https://github.com/liangjieWeb/dsh-sys-monitor#readme",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "system-monitor",
+    "performance",
+    "cpu",
+    "gpu",
+    "web"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "scripts": {
+    "build:helper": "sh tools/build-helper.sh",
+    "check:drivers": "node tools/driver-check.mjs",
+    "check:render": "node tools/render-check.mjs"
+  }
+}

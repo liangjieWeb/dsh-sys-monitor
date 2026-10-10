@@ -1,0 +1,6 @@
+# Compiled from helper/*.c by tools/build-helper.sh — built per machine.
+bin/
+
+node_modules/
+.DS_Store
+*.tgz
