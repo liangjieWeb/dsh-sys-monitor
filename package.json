@@ -1,5 +1,5 @@
 {
-  "name": "@liangjieweb/dsh-sys-monitor",
+  "name": "@liangjie-web/dsh-sys-monitor",
   "version": "0.1.0",
   "description": "System monitor overlay for the DeepSeek Harness Web GUI: CPU perf levels, memory, GPU and network as live progress bars with live clocks",
   "type": "module",

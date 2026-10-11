@@ -171,7 +171,7 @@ const run = new Function(
 run(windowStub, documentStub, fetchStub, (fn, ms) => timers.push({ fn, ms }) && timers.length, () => {}, abortStub)
 
 assert.ok(served, 'the bundle never called window.__ModuleLoader__.load')
-assert.equal(served.id, '@liangjieweb/dsh-sys-monitor')
+assert.equal(served.id, '@liangjie-web/dsh-sys-monitor')
 
 const exportsObject = served.factory((specifier) => {
   if (specifier === 'react') return reactStub
